@@ -1,17 +1,48 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import FailMessage from './FailMessage';
+import PassMessage from './PassMessage'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+// ReactDOM.render(<App isPass={true} />, document.getElementById('root'));
+
+// const name = "Ash Prince"
+// const element = (
+//     <h1>
+//         Hello, {name}. Welcome to GeeksforGeeks.
+//     </h1>
+// )
+
+
+// let i = 4;
+
+// const element = (
+//   <h1>
+//       <h1>{i == 1? "Hello Ash" : "Goodbye"}</h1>
+//   </h1>
+// )
+
+// wraping elements in JSX
+// const element = (
+//   <div>
+//       <h1>This is Heading 1</h1>
+//       <h2>This is Heading 2</h2>
+//       <h3>This is Heading 3</h3>
+//   </div>
+// )
+// ReactDOM.render(element, document.getElementById('root'));
+
+// lists in DOM
+const numbers = [1, 2, 3, 4, 5];
+const updatedNums = numbers.map((number) => {
+  return <li>{number}</li>;
+});
+ReactDOM.render(
+  <ul>
+    {updatedNums}
+  </ul>,
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// rendering lists in components
